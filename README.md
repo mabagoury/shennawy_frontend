@@ -1,36 +1,39 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# The Shennawy Frontend
+Welcome to the Shennawy Frontend project, which is set up with Next.js app router, ESLint, and Prettier for seamless development and deployment. This project provides a ready-to-go setup for building and running the frontend, ensuring clean code and efficient development workflows.
 
-## Getting Started
+# Prerequisites
+Before you get started, ensure you have the following installed on your machine:
 
-First, run the development server:
+- Git
+- Docker
+- Docker Compose
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+# Project Setup
+To run the project locally, you'll use Docker for a streamlined environment setup.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. Clone the repository to your local machine:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+   ```bash
+   git clone https://github.com/your-username/shennawy_frontend.git
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+   cd shennawy_frontend
+   ```
 
-## Learn More
+2. Set up environment variables
+Before running the project, you need to configure your environment variables. Copy the contents of the `.env.example` file into a new `.env` file and fill in the values for your environment.
 
-To learn more about Next.js, take a look at the following resources:
+3. Docker Setup
+We have a docker-compose.yml file that sets up the frontend locally. To start the services in one command, run:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   ```bash
+   docker-compose up
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+   This will build the service and start the container. By default, the Nex.js server should be available at http://localhost:3000.
 
-## Deploy on Vercel
+4. Linting and Formatting
+This project uses ESLint and Prettier to enforce consistent code style. To run the linter, use the following npm script:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+   ```bash
+   npm run lint
+   ```
